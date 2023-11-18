@@ -16,12 +16,12 @@
 body{
     background: linear-gradient(45deg, var(--cool-blue), var(--sunset-orange));
     height: 100vh;
+    background-attachment: fixed;
 }
 .container{
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
     width:100%;
     flex-wrap: wrap;
     position:relative;
@@ -52,6 +52,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     width:100%;
+    
 }
 .my-details .intro{
     display: flex;
