@@ -1,0 +1,207 @@
+:root{
+    --cool-blue:#2d4354;
+    --sage-green:#737661;
+    --tan:#E1D9D1;
+    --sunset-orange:#9e6752;
+    --fading-brown:#534145;
+    --faded-purple:#20212b;
+}
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    font-family: poppins,sans-serif;
+}
+body{
+    background: linear-gradient(45deg, var(--cool-blue), var(--sunset-orange));
+    height: 100vh;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width:100%;
+    flex-wrap: wrap;
+    position:relative;
+}
+.my-card{
+    background-color: var(--faded-purple);
+    width: 400px;
+    padding:3rem;
+    border-radius:10px;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    margin: 15px auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.my-card .profile-pic{
+    margin-top: 15px;
+}
+.my-card .profile-pic img{
+    border-radius:10px;
+}
+.my-card .my-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+}
+.my-details .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.my-details .intro h2{
+    color: var(--tan);
+    margin-top: 20px;
+}
+.my-details .intro h4{
+    color: var(--tan);
+    background: var(--cool-blue);
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin:8px;
+}
+.my-details .intro .socials{
+    color: var(--sunset-orange);
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.my-details .intro .socials i{
+    color: var(--sunset-orange);
+    font-size: 16px;
+    color: #222;
+    margin: 6px;
+    height: 35px;
+    width:35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.my-details .intro .socials i:hover{
+    transform:scale(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.my-details .contact-info{
+    background-color: var(--cool-blue);
+    padding:15px;
+    border-radius: 10px;
+    width:100%
+}
+.my-details .contact-info .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.contact-info .row .icon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #111;
+    text-align: center;
+    color:#fff;
+    transition: 0.5s;
+}
+.row .icon:hover{
+    transform: scale(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.row .content{
+    width: 70%;
+}
+.row .content span{
+    font-size: 12px;
+}
+
+/**about section***/
+.about{
+    background-color: var(--faded-purple);
+    max-width: 800px;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+.about h1{
+    color: var(--sunset-orange);
+    border-bottom: 1.1rem;
+    position:relative;
+    display: inline-block;
+    font-size: 3.5rem;
+}
+.about h1::after{
+    position: absolute;
+    content: "";
+    top:50%;
+    right:-50%;
+    width: 45%;
+    height: 3px;
+    background: linear-gradient(45deg, #f64c57, #e21b5a);
+}
+.about h2{
+    color: var(--sunset-orange);
+    font-size: 2rem;
+    margin:0.5rem 0;
+}
+.about p{
+    color: var(--tan);
+    margin:1.5rem 0;
+}
+.about .work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.work .workbox{
+    background-color: var(--cool-blue);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding:1rem;
+    margin: 1rem;
+
+}
+
+.work .workbox .desc{
+    width:75%;
+    color:#555;
+}
+.work .workbox .desc h3{
+    color:var(--sunset-orange);
+    margin-bottom:3px;
+}
+.work .workbox .desc p{
+    margin:0px; 
+}
+/***Responsive Design**/
+@media(max-width: 768px)
+{
+    .about{
+        width:100%;
+        max-width:400px;
+        padding:1rem;
+        margin:1rem;
+
+    }
+    .about h1{
+        font-size: 2.2rem;
+    }
+    .about .work{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,auto);
+    }
+}
